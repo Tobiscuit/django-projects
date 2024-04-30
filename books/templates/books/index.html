@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h1>Books</h1>
+    <ul>
+      {% if books %}
+        <p>Books found: {{ books|length }}</p>
+      {% else %}
+        <p>No books found</p>
+      {% endif %}
+      {% for book in books %}
+        <li>{{ book.title }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
